@@ -58,43 +58,43 @@ begin
     inorder_inverse(a);
 end;
 
-procedure test_profunidad_max_1_2(a: tbinaryTree);
+procedure prof_max(a: tbinaryTree);
 var
     profundidad: integer;
 begin
-    profundidad := profundidad_max(a);
+    profundidad := prof_max(a);
     WriteLn('Ejercicio 1.2: Profundidad máxima: ', profundidad);
 end;
 
-procedure test_contar_nodos_1_3(a: tbinaryTree);
+procedure contar(a: tbinaryTree);
 var
     cantidad: integer;
 begin
-    cantidad := node_count(a);
+    cantidad := contar(a);
     WriteLn('Ejercicio 1.3: Cantidad de nodos: ', cantidad);
 end;
 
-procedure test_contar_hojas_1_4(a: tbinaryTree);
+procedure contar_hoj(a: tbinaryTree);
 var
     cantidad: integer;
 begin
-    cantidad := leafs_count(a);
+    cantidad := contar_hoj(a);
     WriteLn('Ejercicio 1.4: Cantidad de hojas: ', cantidad);
 end;
 
-procedure test_contar_nodos_internos_1_5(a: tbinaryTree);
+procedure contar_int(a: tbinaryTree);
 var
     cantidad: integer;
 begin
-    cantidad := internal_nodes_count(a);
+    cantidad := contar_int(a);
     WriteLn('Ejercicio 1.5: Cantidad de nodos internos: ', cantidad);
 end;
 
-procedure test_es_completo_1_6(a: tbinaryTree);
+procedure lleno(a: tbinaryTree);
 var
     completo: boolean;
 begin
-    completo := is_full(a);
+    completo := lleno(a);
     if completo then
         WriteLn('Ejercicio 1.6: El árbol es completo.')
     else
