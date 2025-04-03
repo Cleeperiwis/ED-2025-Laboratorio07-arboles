@@ -152,33 +152,58 @@ begin
 end;
 
 { ---------------Ejercicio 1.2------------------ }
-function profundidad_max(a:tbinaryTree): integer;
+function prof_max(a:tbinaryTree): integer;
 begin
-  writeln('NO IMPLEMENTADO');
+  if a = nil then
+     prof_max := 0
+  else
+     prof_max := 1 + Max(prof_max(a^.hi), prof_max(a^.hd));
 end;
 
 { ---------------Ejercicio 1.3------------------ }
-function node_count(a:tbinaryTree): integer;
+function contar(a: tbinaryTree): integer;
+
 begin
-  writeln('NO IMPLEMENTADO');
+
+  if a = nil them
+    contar := 0
+  else
+    contar := 1 + contar(a^.hi) + contar(a^.hd);
 end;
 
 { ---------------Ejercicio 1.4------------------ }
-function leafs_count(a:tbinaryTree): integer;
+function contar_hoj(a:tbinaryTree): integer;
 begin
-  writeln('NO IMPLEMENTADO');
+  if a = nil then
+    contar_hoj := 0
+  else if (a^.hi = nil) or (a^.hd = nil) then
+    contar_hoj := 1
+  else
+    contar_hoj := contar_hoj(a^.hi) + contar_hoj(a^.hd);
 end;
 
 { ---------------Ejercicio 1.5------------------ }
-function internal_nodes_count(a:tbinaryTree): integer;
+function contar_int(a:tbinaryTree): integer;
 begin
-  writeln('NO IMPLEMENTADO');
+  if a = nil then
+    contar_int := 0
+  else if (a^.hi <> nil) or (a^.hd <> nil) then
+    contar_int := 1 + contar_int(a^.hi) + contar_int(a^.hd);
+  else
+    contar_int := 0;
 end;
 
 { ---------------Ejercicio 1.6------------------ }
-function is_full(a: tbinaryTree): boolean;
+function lleno(a: tbinaryTree): boolean;
 begin
-  writeln('NO IMPLEMENTADO');
+  if a = nil then
+    lleno := true
+  else if (a^.hi = nil) and (a^.hd = nil) then
+    lleno := true
+  else if (a^.hi <> nil) and (a^.hd <> nil) then
+    lleno := lleno(a^.hi) and lleno(a^.hd)
+  else
+    lleno := false;
 end;
 
   
